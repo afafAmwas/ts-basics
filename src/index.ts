@@ -32,11 +32,11 @@ type ApiResponse = {
 
 // using unknown or defined type instead of any
 function processData(data: ApiResponse) {
-  console.log(data.name);      // ✅ TypeScript knows it's a string
-  return data.value * 2;       // ✅ TypeScript knows it's a number
+  console.log(data.name);   
+  return data.value * 2;      
 }
 
-console.log(processData({ name: "Afaf", value: 10 })); // ✅ Works fine
+console.log(processData({ name: "Afaf", value: 10 })); 
 
 /////////////////////////////////////////////////////////////////////////// Task4
 console.log("\n-------------- Task 4 -----------\n")
@@ -68,7 +68,7 @@ console.log("\n-------------- Task 5 Functions -----------\n")
 function greet(name: string) {
   console.log("Hello, " + name);
 }
-greet("Masa"); // ✅ works
+greet("Masa"); 
 
 // specifying the return type
 function double(x: number): number {
