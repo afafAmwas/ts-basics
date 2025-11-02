@@ -83,4 +83,53 @@ function addNumbers(num1: number, num2: number) {
 }
 
 console.log(addNumbers(10, 20));
+/////////////////////////////////////////////////////////////////////////// Task6 - Interfaces
+console.log("\n-------------- Task 6 Interfaces -----------\n");
+interface Person{
+  name: string,
+  age: number
+};
 
+const person1: Person = {
+  name : "Masa",
+  age : 23
+};
+
+console.log("the person is: ", person1);
+
+/////////////////////////////////////////////////////////////////////////// Tas6 - functions
+console.log("\n-------------- Task 6 fucntions ---------\n");
+
+function add(num1: number, num2: number){
+  return num1 + num2;
+}
+function subtract(num1: number, num2: number){
+  return num1 - num2;
+}
+function multiply(num1: number, num2: number){
+  return num1 * num2;
+}
+function divide(num1: number, num2: number){
+  if (num2 === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return num1 / num2;
+}
+console.log("add 10 + 5 = ", add(10, 5));
+console.log("subtrac 10 - 5 ", subtract(10, 5));
+console.log("multiply 10*5 : ", multiply(10, 5));
+console.log("divide: 10/5 ", divide(10, 5));
+
+/////////////////////////////////////////////////////////////////////////// Task7  
+console.log("\n-------------- Task 7 Type Narrowing -----------\n");
+
+function displayValue(value: string | number): void {
+  if (typeof value === "string") {
+    console.log(`You passed a string:" ${value} " with length:`, value.length);
+  } else {
+    console.log("You passed a number, its value is: ", value);
+  }
+}
+
+displayValue("Masa"); 
+displayValue(5); 
